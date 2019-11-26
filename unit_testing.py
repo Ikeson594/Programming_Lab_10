@@ -45,18 +45,31 @@ class ListManipulator:
 
 
 # creating the tests
-class testmin(unittest.TestCase):
-    def test1(self):
+
+class TestMin(unittest.TestCase):
+    def test_1(self):
         List = ListManipulator([4, 2, 3, 1, 9, 3, 1, 3])
         minimum = List.min()
         self.assertEqual(minimum, 1)
 
-    def test2(self):
+    def test_2(self):
         List = ListManipulator([4, 2, 1, 9, 3])
-        minimum = List.min()
-        self.assertEqual(minimum, 1)
+        self.assertEqual(List.min(), 1)
+
+
+class TestMax(unittest.TestCase):
+    def test_1(self):
+        List = ListManipulator([4, 2, 3, 1, 9, 3, 1, 3])
+        maximum = List.max()
+        self.assertEqual(maximum, 9)
+
+    def test_2(self):
+        List = ListManipulator([4, 2, 1, 9, 11])
+        maximum = List.max()
+        self.assertEqual(maximum, 11)
 
 
 # calling the tests
+
 
 unittest.main()
