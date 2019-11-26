@@ -1,3 +1,13 @@
+# Mike Wilkinson
+# Programming Lab 10
+# Unit Testing
+
+# importing unittest
+
+import unittest
+
+# List manipulator
+
 class ListManipulator:
     def __init__(self, list):
         self.list = list
@@ -34,4 +44,19 @@ class ListManipulator:
             removed_count += 1
 
 
+# creating the tests
+class testmin(unittest.TestCase):
+    def test1(self):
+        List = ListManipulator([4, 2, 3, 1, 9, 3, 1, 3])
+        minimum = List.min()
+        self.assertEqual(minimum, 1)
 
+    def test2(self):
+        List = ListManipulator([4, 2, 1, 9, 3])
+        minimum = List.min()
+        self.assertEqual(minimum, 1)
+
+
+# calling the tests
+
+unittest.main()
